@@ -1,6 +1,6 @@
 {
   "name": "only-fns",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A set of function for functionalities and patterns found regularly while coding",
   "type": "module",
   "main": "index.js",
@@ -37,5 +37,8 @@
   },
   "optionalDependencies": {
     "react": "^17 || ^18"
+  },
+  "dependencies": {
+    "standard-version": "^9.5.0"
   }
 }
