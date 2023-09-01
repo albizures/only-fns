@@ -15,7 +15,7 @@ const common: Options = {
 };
 
 export default defineConfig(async () => {
-  const files = await glob("src/**/!(*.examples).ts");
+  const files = await glob("src/**/!(*.examples|*.test).ts");
 
   return files.map((file) => {
     const dirname = path.dirname(file);
