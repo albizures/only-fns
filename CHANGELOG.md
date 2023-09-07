@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/albizures/only-fns/compare/v1.1.0...v1.2.0) (2023-09-07)
+
+
+### Features
+
+* add new await to function ([b8f2643](https://github.com/albizures/only-fns/commit/b8f2643ba465c0d75b2da7ff2cdfd6a9f07bfc3c))
+
 ## [1.1.0](https://github.com/albizures/only-fns/compare/v1.0.1...v1.1.0) (2023-09-01)
 
 
