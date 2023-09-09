@@ -1,6 +1,6 @@
 {
   "name": "only-fns",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A set of function for functionalities and patterns found regularly while coding",
   "type": "module",
   "main": "index.js",
