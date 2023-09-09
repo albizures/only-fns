@@ -25,20 +25,31 @@
   "author": "Jose Albizures <jose@albizures.com> (https://albizures.com/)",
   "license": "MIT",
   "devDependencies": {
-    "@swc/core": "^1.3.62",
-    "@types/node": "^20.2.5",
+    "@albizures/prettier-config": "^1.0.1",
+    "@swc/core": "^1.3.83",
+    "@types/node": "^20.6.0",
     "@types/react": "^18.2.8",
     "npm-run-all": "^4.1.5",
     "react": "^18.2.0",
     "standard-version": "^9.5.0",
     "tiny-glob": "^0.2.9",
     "tslib": "^2.6.2",
-    "tsup": "^6.7.0",
-    "typescript": "^5.1.3",
-    "vite": "^4.3.9",
-    "vitest": "^0.34.3"
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.4",
+    "xo": "^0.56.0"
   },
   "optionalDependencies": {
     "react": "^17 || ^18"
+  },
+  "xo": {
+    "rules": {
+      "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+      "import/extensions": ["off"],
+      "arrow-body-style": ["error", "always"],
+      "object-curly-spacing": ["error", "always"],
+      "@typescript-eslint/object-curly-spacing": ["error", "always"]
+    }
   }
 }

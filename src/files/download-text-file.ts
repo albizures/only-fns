@@ -1,4 +1,4 @@
-import { downloadURI } from "./downloadURI";
+import { downloadUri } from './download-uri';
 
 /**
  * A very long, verbose, wordy, long-winded, tedious, verbacious, tautological,
@@ -7,8 +7,8 @@ import { downloadURI } from "./downloadURI";
  * @summary A concise summary.
  */
 export function downloadTextFile(filename: string, text: string) {
-  downloadURI(
-    filename,
-    "data:text/plain;charset=utf-8," + encodeURIComponent(text)
-  );
+	downloadUri(
+		filename,
+		'data:text/plain;charset=utf-8,' + encodeURIComponent(text),
+	);
 }
