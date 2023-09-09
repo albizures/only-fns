@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/albizures/only-fns/compare/v1.2.0...v2.0.0) (2023-09-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* create run in context function and factory
+
+### Features
+
+* create run in context function and factory ([07286ba](https://github.com/albizures/only-fns/commit/07286ba7c065bf3a971cb13cd1b6644726326ab7))
+
 ## [1.2.0](https://github.com/albizures/only-fns/compare/v1.1.0...v1.2.0) (2023-09-07)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "only-fns",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "A set of function for functionalities and patterns found regularly while coding",
   "type": "module",
   "main": "index.js",
@@ -45,11 +45,25 @@
   },
   "xo": {
     "rules": {
-      "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
-      "import/extensions": ["off"],
-      "arrow-body-style": ["error", "always"],
-      "object-curly-spacing": ["error", "always"],
-      "@typescript-eslint/object-curly-spacing": ["error", "always"]
+      "@typescript-eslint/consistent-type-definitions": [
+        "error",
+        "interface"
+      ],
+      "import/extensions": [
+        "off"
+      ],
+      "arrow-body-style": [
+        "error",
+        "always"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "@typescript-eslint/object-curly-spacing": [
+        "error",
+        "always"
+      ]
     }
   }
 }
