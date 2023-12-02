@@ -9,7 +9,7 @@ export function useToggle(defaultStatus: ToggleStatus = 'off') {
 }
 
 export function toggle(setStatus: SetStatus) {
-	setStatus(current => {
+	setStatus((current) => {
 		return current === 'off' ? 'on' : 'off';
 	});
 }

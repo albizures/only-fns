@@ -1,11 +1,11 @@
-export interface OkResult<D> {
-	ok: true;
-	data: D;
-}
-export interface FailResult<E = unknown> {
-	ok: false;
-	error: E;
-}
+export type OkResult<D> = {
+	ok: true
+	data: D
+};
+export type FailResult<E = unknown> = {
+	ok: false
+	error: E
+};
 
 export type Result<D, E = unknown> = OkResult<D> | FailResult<E>;
 
@@ -30,8 +30,8 @@ export async function to<D, E = unknown>(
 		const data = await promise;
 
 		return okResult(data);
-	} catch (error) {
+	}
+	catch (error) {
 		return failResult(error as E);
 	}
 }
-

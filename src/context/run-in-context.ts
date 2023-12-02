@@ -1,10 +1,10 @@
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+// eslint-disable-next-line ts/consistent-type-definitions
 export interface RunInContext {
 	//
 }
 
 type Context = RunInContext extends {
-	context: infer T;
+	context: infer T
 }
 	? T
 	: unknown;

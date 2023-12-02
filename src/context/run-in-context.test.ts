@@ -1,16 +1,17 @@
-import { expect, test } from 'vitest';
-import { getContext, inContext, createContext } from './run-in-context';
+import { expect, it } from 'vitest';
+import { createContext, getContext, inContext } from './run-in-context';
 
 declare module './run-in-context' {
 
+	// eslint-disable-next-line ts/consistent-type-definitions
 	interface RunInContext {
 		context: {
-			foo: string;
-		};
+			foo: string
+		}
 	}
 }
 
-test('run in context', () => {
+it('run in context', () => {
 	const context1 = {
 		foo: 'test 1',
 	};
@@ -38,10 +39,10 @@ test('run in context', () => {
 	});
 });
 
-test('create context', () => {
-	interface Context {
-		custom: number;
-	}
+it('create context', () => {
+	type Context = {
+		custom: number
+	};
 
 	const [getContext, inContext] = createContext<Context>();
 

@@ -9,6 +9,6 @@ import { downloadUri } from './download-uri';
 export function downloadTextFile(filename: string, text: string) {
 	downloadUri(
 		filename,
-		'data:text/plain;charset=utf-8,' + encodeURIComponent(text),
+		`data:text/plain;charset=utf-8,${encodeURIComponent(text)}`,
 	);
 }
