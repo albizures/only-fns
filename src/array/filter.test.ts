@@ -1,4 +1,4 @@
-import { expect } from 'vitest';
+import { expect, it } from 'vitest';
 import { outItem } from './filter';
 
 it('filter out item', () => {
