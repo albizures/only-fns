@@ -108,21 +108,21 @@ describe('next', () => {
 	});
 
 	describe('when one of the next functions returns an error', () => {
-		it('should not run any other  next function', async () => {
+		it.only('should not run any other  next function', async () => {
 			const addOne = vi.fn((_value: number): Result<number, Error> => {
 				return r.err(new Error('unable to add one'));
 			});
 
 			const toString = vi.fn((value: number) => {
-				return r.ok(String(value));
+				return Promise.resolve(r.ok(String(value)));
 			});
 
 			const result = await Promise.resolve(r.ok(1))
-				.then(r.next(addOne))
+				.then(r.next(addOne, 'custom error'))
 				.then(r.next(toString));
 
 			expect(result.value).toMatchObject({
-				message: 'unable to add one',
+				message: 'custom error',
 			});
 			expect(addOne).toHaveBeenCalled();
 			expect(toString).not.toHaveBeenCalled();

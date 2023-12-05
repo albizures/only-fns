@@ -73,11 +73,20 @@ export function next<
 	TValue,
 	TResult extends Result<any, any>,
 >(
-	nextFn: (value: TValue) => TResult,
+	nextFn: (value: TValue) => TResult | Promise<TResult>,
+	message?: string,
 ) {
 	return async <TError>(result: Result<TValue, TError>) => {
 		if (result.ok) {
-			return nextFn(result.value);
+			const nextResult = await nextFn(result.value);
+
+			if (!nextResult.ok) {
+				if (message) {
+					return Err(new Error(message));
+				}
+			}
+
+			return nextResult;
 		}
 
 		return result;
