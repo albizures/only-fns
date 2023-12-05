@@ -10,15 +10,62 @@
 		"utils",
 		"functions"
 	],
-	"main": "index.js",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		},
+		"./array/filter": {
+			"types": "./dist/array/filter.d.ts",
+			"import": "./dist/array/filter.mjs",
+			"require": "./dist/array/filter.js"
+		},
+		"./array/sort": {
+			"types": "./dist/array/sort.d.ts",
+			"import": "./dist/array/sort.mjs",
+			"require": "./dist/array/sort.js"
+		},
+		"./context/run-in-context": {
+			"types": "./dist/context/run-in-context.d.ts",
+			"import": "./dist/context/run-in-context.mjs",
+			"require": "./dist/context/run-in-context.js"
+		},
+		"./files/download-text-file": {
+			"types": "./dist/files/download-text-file.d.ts",
+			"import": "./dist/files/download-text-file.mjs",
+			"require": "./dist/files/download-text-file.js"
+		},
+		"./files/download-uri": {
+			"types": "./dist/files/download-uri.d.ts",
+			"import": "./dist/files/download-uri.mjs",
+			"require": "./dist/files/download-uri.js"
+		},
+		"./promises/await-to": {
+			"types": "./dist/promises/await-to.d.ts",
+			"import": "./dist/promises/await-to.mjs",
+			"require": "./dist/promises/await-to.js"
+		},
+		"./react/use-toggle": {
+			"types": "./dist/react/use-toggle.d.ts",
+			"import": "./dist/react/use-toggle.mjs",
+			"require": "./dist/react/use-toggle.js"
+		},
+		"./result": {
+			"types": "./dist/result/index.d.ts",
+			"import": "./dist/result/index.mjs",
+			"require": "./dist/result/index.js"
+		}
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"files": [
-		"*"
+		"dist"
 	],
 	"scripts": {
 		"dev": "vite",
-		"build": "NODE_ENV=production npm-run-all build:js build:package",
-		"build:js": "tsup",
-		"build:package": "cp package.json dist/package.json",
+		"build": "NODE_ENV=production npm-run-all build:js",
+		"build:js": "unbuild",
 		"build:examples": "vite build",
 		"preview": "vite preview",
 		"test": "vitest",
@@ -40,8 +87,8 @@
 		"standard-version": "^9.5.0",
 		"tiny-glob": "^0.2.9",
 		"tslib": "^2.6.2",
-		"tsup": "^7.2.0",
 		"typescript": "^5.2.2",
+		"unbuild": "^2.0.0",
 		"vite": "^4.4.9",
 		"vitest": "^0.34.4"
 	}
